@@ -19,13 +19,12 @@ body {
 .section {
   height: 100vh;
   margin: 0 auto;
-  // display: flex;
-  // justify-content: center;
+  max-width: 1000px;
 }
 .container {
   padding: 2rem 4rem 1rem 1rem;
   background: $Dark-Blue;
-  max-width: 400px;
+  max-width: 350px;
   margin: 5rem auto 2rem;
   border-top-right-radius: 120px;
   border-top-left-radius: 15px;
@@ -51,10 +50,11 @@ body {
 .storage {
   padding: 2rem 2rem 4rem 2rem;
   background: $Dark-Blue;
-  max-width: 400px;
+  max-width: 350px;
   margin: 2rem auto;
   border-radius: 15px;
   color: white;
+  position: relative;
   &-info {
     margin: 1rem 0;
     text-align: center;
@@ -97,8 +97,10 @@ body {
     background: #fff;
     padding: 1rem;
     max-width: 200px;
-    margin: auto;
-    transform: translateY(-80px);
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
     border-radius: 15px;
     display: flex;
     justify-content: space-evenly;
@@ -106,9 +108,42 @@ body {
   }
   &-number {
     font-size: 2.5rem;
+    color: black;
   }
   &-text {
     color: $Grayish-Blue;
     font-weight: bold;
+  }
+}
+@media (min-width: 800px) {
+  .section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .storage {
+    max-width: 600px;
+    align-self: center;
+    margin-top: 9rem;
+    flex-grow: 1;
+  }
+  .whitebox {
+    &-left {
+      clip-path: polygon(
+        0% 0%,
+        100% 0%,
+        100% 75%,
+        100% 75%,
+        100% 100%,
+        76% 75%,
+        0% 75%
+      );
+      border-bottom-right-radius: 0;
+      transform: translate(70px, -180px);
+    }
+    &-number,
+    &-text {
+      margin-bottom: 1rem;
+    }
   }
 }
