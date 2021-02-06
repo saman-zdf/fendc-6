@@ -96,6 +96,8 @@ body {
   font-weight: bold; }
 
 @media (min-width: 800px) {
+  body {
+    background: url("../images/bg-desktop.png") center/cover no-repeat; }
   .section {
     display: flex;
     justify-content: space-around;
