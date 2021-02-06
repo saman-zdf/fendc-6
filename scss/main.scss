@@ -74,7 +74,11 @@ body {
   &-level {
     width: 80%;
     height: inherit;
-    background: linear-gradient(rgb(255, 163, 153), rgb(255, 77, 151));
+    background: linear-gradient(
+      to right,
+      rgb(255, 163, 153),
+      rgb(255, 77, 151)
+    );
     border-radius: 10px;
   }
   &-circle {

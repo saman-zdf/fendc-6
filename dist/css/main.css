@@ -59,7 +59,7 @@ body {
   .storage-level {
     width: 80%;
     height: inherit;
-    background: linear-gradient(#ffa399, #ff4d97);
+    background: linear-gradient(to right, #ffa399, #ff4d97);
     border-radius: 10px; }
   .storage-circle {
     width: 13px;
